@@ -1,263 +1,251 @@
-<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>BookwormKevin's Games!</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(45deg, #4facfe, #00f2fe, #7ee8fa, #80d0c7);
+        margin: 0;
+        padding: 0;
+        color: #333;
+        animation: gradientBG 15s ease infinite;
+        background-size: 400% 400%;
+      }
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        text-align: center;
+        padding: 40px 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 15px;
+        margin-bottom: 30px;
+      }
+      h1 {
+        font-size: 3em;
+        color: #0077be;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .game-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+      .game-card {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        flex-basis: 48%;
+        margin: 0 10px;
+      }
+      .game-card.small {
+        flex-basis: 30%;
+      }
+      .game-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .game-title {
+        font-size: 1.5em;
+        color: #4a4a4a;
+        margin-bottom: 10px;
+      }
+      .download-btn,
+      .play-btn {
+        display: inline-block;
+        background-color: #00a86b;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      .download-btn:hover,
+      .play-btn:hover {
+        background-color: #008f5b;
+      }
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 15px;
+      }
+      .new-label {
+        background-color: #0077be;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 0.8em;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .play-section {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        margin-top: 40px;
+      }
+      .play-section h2 {
+        color: #0077be;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      .ball-animation {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        animation: bounce 1s infinite alternate, colorChange 5s infinite linear;
+        box-shadow: 0 0 0 2px black;
+      }
+      @keyframes bounce {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-20px);
+        }
+      }
+      @keyframes colorChange {
+        0% {
+          background-color: red;
+        }
+        16.66% {
+          background-color: orange;
+        }
+        33.33% {
+          background-color: yellow;
+        }
+        50% {
+          background-color: green;
+        }
+        66.66% {
+          background-color: blue;
+        }
+        83.33% {
+          background-color: indigo;
+        }
+        100% {
+          background-color: violet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>BookwormKevin's Games</h1>
+        <p>Welcome to the vibrant world of BookwormKevin's games!</p>
+      </header>
 
-<head>
+      <main>
+        <div class="game-row">
+          <div class="game-card" style="position: relative">
+            <span class="new-label">NEW!</span>
+            <h2 class="game-title">Level UP - Mario's Minigames Mayhem</h2>
+            <p>
+              The Mario animations of animator Level UP are now playable! Can
+              you beat them all?
+            </p>
+            <a href="https://bookwormkevin.itch.io/lummm" class="download-btn"
+              >Play Now!</a
+            >
+          </div>
 
-	<title>BookwormKevin's Games!</title>
-	<!--
+          <div class="game-card">
+            <h2 class="game-title">Hamster Ballance Blast</h2>
+            <p>Hamsterball, Ballance, and Marble Blast Gold all in one!</p>
+            <a
+              href="https://bookwormkevin.itch.io/hamsterballance-blast"
+              class="download-btn"
+              >Download Now</a
+            >
+            <a
+              href="https://github.com/kkuhn317/Hamster-Ballance-Blast"
+              class="download-btn"
+              >Source Code</a
+            >
+            <a
+              href="https://drive.google.com/file/d/1t6RVv1g--fcv8z1vy4u0rmvYpBIG4ZhU/view?usp=sharing"
+              class="download-btn"
+              >April Fools Version</a
+            >
+          </div>
+        </div>
 
-DIGITAL TREND
+        <div class="game-row">
+          <div class="game-card small">
+            <h2 class="game-title">Driving Madness</h2>
+            <p>
+              Drive a truck through many obstacle courses! This is my first ever
+              real game!
+            </p>
+            <a
+              href="https://drive.google.com/file/d/189ZjV2fKjsz3NUUZgBgZPoV4rimPzQUq/view?usp=sharing"
+              class="download-btn"
+              >Download Now</a
+            >
+          </div>
 
-https://templatemo.com/tm-538-digital-trend
+          <div class="game-card small">
+            <h2 class="game-title">Driving Madness Remix</h2>
+            <p>
+              Drive through many classic locations in different video games!
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1rJLVEoH4uD0VEsSk3qCPBAcVkjOz-B0N/view?usp=sharing"
+              class="download-btn"
+              >Download Now</a
+            >
+            <p>Note: code to get past wall is 696999</p>
+          </div>
 
--->
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+          <div class="game-card small">
+            <h2 class="game-title">KRS RPG</h2>
+            <p>
+              An amazing RPG that tells the story of the Kevin's Random Stuff
+              Discord server!
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1M1744jZ7IgVwTX-lPtgCZGYTpjzv1K1C/view?usp=drivesdk"
+              class="download-btn"
+              >Download Now</a
+            >
+          </div>
+        </div>
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <div class="play-section">
+          <h2>Play a ball game made by AI!</h2>
+          <div class="ball-animation"></div>
+          <p>See how fast you can beat all 5 levels!</p>
+          <a href="ballgame.html" class="play-btn">Play Now!</a>
+        </div>
+      </main>
 
-	<!-- MAIN CSS -->
-	<link rel="stylesheet" href="css/templatemo-digital-trend.css">
-
-</head>
-
-<body>
-
-	<!-- MENU BAR -->
-	<nav class="navbar navbar-expand-lg">
-		<div class="container">
-			<a class="navbar-brand" href="index.html">
-				<i class="fa fa-line-chart"></i>
-				BookwormKevin
-			</a>
-
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a href="#project" class="nav-link smoothScroll">My Games</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-
-	<!-- HERO -->
-	<section class="hero hero-bg d-flex justify-content-center align-items-center">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
-					<div class="hero-text">
-
-						<h1 class="text-white" data-aos="fade-up">Hey, I'm BookwormKevin. I'm just a guy who makes video games. :)</h1>
-
-						<a href="#project" class="custom-btn btn-bg btn mt-3" data-aos="fade-up"
-							data-aos-delay="100">Look at my stuff</a>
-
-					</div>
-				</div>
-
-				<div class="col-lg-6 col-12">
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<!-- ABOUT -->
-	<section class="about section-padding pb-0" id="about">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-lg-7 mx-auto col-md-10 col-12">
-					<div class="about-info">
-
-						<h2 class="mb-4" data-aos="fade-up">I'm the Best <strong>Game Developer</strong> in
-							the World. Totally.</h2>
-
-						<p class="mb-0" data-aos="fade-up"> I make games in my spare time, and here's a website where
-							you can find all my <strong>games</strong> in one place!
-							<br><br>If you want to chat with me, join my Hamster Ballance Blast Discord Server <a
-							href="https://discord.gg/TuG3m5K9r9">HERE</a>
-						</p>
-					</div>
-
-					<div class="about-image" data-aos="fade-up" data-aos-delay="200">
-
-						<img src="images/office.png" class="img-fluid" alt="office">
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<!-- PROJECT -->
-	<section class="project section-padding" id="project">
-		<div class="container-fluid">
-			<div class="row">
-
-				<div class="col-lg-12 col-12">
-
-					<h2 class="mb-5 text-center" data-aos="fade-up">
-						Check out all the random stuff I've made
-						over the years:
-					</h2>
-
-					<div class="owl-carousel owl-theme" id="project-slide">
-						<div class="item project-wrapper" data-aos="fade-up" data-aos-delay="100">
-							<img src="images/project/HBB.png" class="img-fluid" alt="project image">
-
-							<div class="project-info">
-								<small>Game</small>
-
-								<h3>
-									<a href="https://bookwormkevin.itch.io/hamsterballance-blast">
-										<span>Hamster Ballance Blast!</span>
-										<i class="fa fa-angle-right project-icon"></i>
-									</a>
-								</h3>
-							</div>
-						</div>
-
-						<div class="item project-wrapper" data-aos="fade-up">
-							<img src="images/project/project-image02.jpg" class="img-fluid" alt="project image">
-
-							<div class="project-info">
-								<small>Game</small>
-
-								<h3>
-									<a href="https://drive.google.com/file/d/189ZjV2fKjsz3NUUZgBgZPoV4rimPzQUq/view?usp=sharing">
-										<span>Driving Madness</span>
-										<i class="fa fa-angle-right project-icon"></i>
-									</a>
-								</h3>
-							</div>
-						</div>
-
-						<div class="item project-wrapper" data-aos="fade-up">
-							<img src="images/project/project-image03.jpg" class="img-fluid" alt="project image">
-
-							<div class="project-info">
-								<small>Game</small>
-
-								<h3>
-									<a href="https://drive.google.com/file/d/1rJLVEoH4uD0VEsSk3qCPBAcVkjOz-B0N/view?usp=sharing">
-										<span>Driving Madness Remix</span>
-										<i class="fa fa-angle-right project-icon"></i>
-									</a>
-								</h3>
-							</div>
-						</div>
-
-						<div class="item project-wrapper" data-aos="fade-up">
-							<img src="images/project/project-image04.jpg" class="img-fluid" alt="project image">
-
-							<div class="project-info">
-								<small>Game</small>
-
-								<h3>
-									<a href="https://drive.google.com/file/d/1M1744jZ7IgVwTX-lPtgCZGYTpjzv1K1C/view?usp=sharing">
-										<span>Kevin's Random Stuff RPG</span>
-										<i class="fa fa-angle-right project-icon"></i>
-									</a>
-								</h3>
-							</div>
-						</div>
-
-						<div class="item project-wrapper" data-aos="fade-up">
-							<img src="images/project/project-image05.jpg" class="img-fluid" alt="project image">
-
-							<div class="project-info">
-								<small>Game</small>
-
-								<h3>
-									<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-										<span>Level Up's playable animations (Click for preview!)</span>
-										<i class="fa fa-angle-right project-icon"></i>
-									</a>
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<footer class="site-footer">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-lg-5 mx-lg-auto col-md-8 col-10">
-					<h1 class="text-white" data-aos="fade-up" data-aos-delay="100">My games are
-						<strong>cool!</strong> Probably.
-					</h1>
-				</div>
-
-				<div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-					<h4 class="my-4">Contact Info</h4>
-
-					<p>
-						<a href="#">
-							<i class="fa fa-envelope mr-2 footer-icon"></i>
-							kevin@thekuhnfamily.org
-						</a>
-					</p>
-				</div>
-
-
-				<div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
-					<p class="copyright-text">Kevin's Games (not copyrighted)
-						<br>
-						<a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a>
-					</p>
-				</div>
-
-
-				<div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
-
-					<ul class="social-icon">
-						<p>These don't work yet. lol</p>
-						<li><a href="#" class="fa fa-instagram"></a></li>
-						<li><a href="#" class="fa fa-twitter"></a></li>
-						<li><a href="#" class="fa fa-dribbble"></a></li>
-						<li><a href="#" class="fa fa-behance"></a></li>
-						<li><a href="https://drive.google.com/file/d/1Y405AYuIz49S-B7Zor4cxkQZcO_Fg8jW/view?usp=sharing"> </a></li>
-					</ul>
-				</div>
-
-			</div>
-		</div>
-	</footer>
-
-
-	<!-- SCRIPTS -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/aos.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/smoothscroll.js"></script>
-	<script src="js/custom.js"></script>
-
-</body>
-
+      <footer>
+        <p>© 2024 BookwormKevin</p>
+        <p>Website made by BookwormKevin and WebSim.ai</p>
+      </footer>
+    </div>
+  </body>
 </html>
